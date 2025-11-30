@@ -83,16 +83,20 @@
         </div>
     </section>
 
-  <div class="modal fade" id="gameModal" tabindex="-1">
+ <div class="modal fade" id="gameModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content bg-black">
-      <div class="modal-header border-0">
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      
+      <div class="modal-header border-0 p-3 position-absolute w-100" style="z-index: 1055;">
+        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body d-flex justify-content-center align-items-center p-0">
-        <iframe src="p5/index.html" width="640" height="480" frameborder="0">
-        </iframe>
+      
+      <div class="modal-body d-flex justify-content-center align-items-center p-0 bg-black">
+        <div class="modal-iframe-wrapper">
+             <iframe src="p5/index.html" title="Juego Fullscreen"></iframe>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -151,6 +155,7 @@
   </body>
 
 </html>
+
 
 
 
