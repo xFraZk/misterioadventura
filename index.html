@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gravity Falls: Interactive Journey</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top landscape-navbar">
+    <div class="container-fluid px-5">
+
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="text-white fs-5 fw-bold tracking-wide">Lluvia de <span style="color:var(--accent-purple)">Misterios</span></span>
+
+      
+      </a>
+
+      <button class="navbar-toggler border-0 filter-invert" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navLandscape">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navLandscape">
+
+        <ul class="navbar-nav mx-auto gap-4">
+       
+          <li class="nav-item"><a class="nav-link text-white" href="#info">Misión</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#procesos1">Proceso</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#personajes">Personajes</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#equipo">Misión</a></li>
+        </ul>
+
+        <div class="d-none d-lg-block">
+          <a href="juego.html" class="btn btn-white-pill shadow-sm">Aventura Gráfica</a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <section id="inicio" class="hero-section d-flex flex-column align-items-center position-relative overflow-hidden min-vh-100 text-center">
+
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="src/video/video-hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay-black"></div>
+    <div class="hero-glow-green"></div>
+
+    <div class="container pt-4 position-relative z-3">
+
+    </div>
+
+    <div
+      class="container flex-grow-1 d-flex flex-column justify-content-center align-items-center position-relative z-2 py-5">
+
+
+      <h1 class="display-3 fw-bold text-white mb-4 lh-sm animate-up delay-1">
+        Encontra la <span class="text-green-gradient">Estatua</span> <br>
+        de Bill Cipher
+      </h1>
+
+      <p class="lead text-white-50 mb-5 animate-up delay-2" style="max-width: 600px;">
+        Una aventura interactiva donde el código define tu destino. Dipper, Mabel y los misterios de Gravity Falls te
+        esperan.
+      </p>
+
+      <div class="d-flex gap-3 animate-up delay-3">
+        <a href="juego.html" class="btn btn-glow-green rounded-pill px-5 py-3 fw-bold text-dark">
+          Iniciar Aventura
+        </a>
+        <a href="#procesos1" class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold">
+      Proceso de producción
+    </a>
+  
+      </div>
+
+    </div>
+
+    <div class="container position-relative z-2 pb-5 mt-auto">
+      <p class="text-white-50 small mb-4 text-uppercase ls-2">Tecnologías Utilizadas</p>
+
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-5 brands-opacity">
+
+        <div class="d-flex align-items-center gap-2 brand-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Processing_2021_logo.svg" height="30"
+            class="filter-white">
+          <span class="h5 mb-0 text-white fw-bold">Processing</span>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 brand-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/P5.js_icon.svg/1200px-P5.js_icon.svg.png"
+            height="30" class="filter-white">
+          <span class="h5 mb-0 text-white fw-bold">p5.js</span>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <section id="info" class="split-section position-relative w-100 overflow-hidden">
+    <div class="split-bg-layer"></div>
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-100 align-items-stretch">
+
+            <div class="col-lg-6 left-glass-col d-flex flex-column justify-content-center align-items-start align-items-lg-end p-5 position-relative overflow-visible">
+
+                <div class="content-wrapper text-start text-lg-end" style="z-index: 20;">
+
+                    <h1 class="giant-title text-uppercase fw-black lh-1 mb-4 animate-up delay-1" style="white-space: nowrap;">
+                        
+                        <div class="d-flex justify-content-start justify-content-lg-end align-items-center">
+                            <span class="textured-text">EL MISTE<span class="text-white crossing-part">RIO</span></span>
+                        </div>
+
+                        <div class="d-block">
+                            <span class="textured-text">DEL BOSQUE</span>
+                        </div>
+                    </h1>
+
+                    <p class="lead text-white-70 mb-5 animate-up delay-2 lh-base ms-lg-auto me-lg-0 me-auto" style="max-width: 500px;">
+                        Hay un momento donde tu decisión lo cambia todo. Busca la estatua de <strong>Bill Cipher</strong> usando la lógica o el caos. El bosque te observa.
+                    </p>
+
+                    <a href="#procesos1" class="cta-link-sutil animate-up delay-3 d-inline-flex align-items-center gap-2 text-uppercase fw-bold ls-1 text-white text-decoration-none">
+                        Mira el proceso
+                        <span class="material-symbols-outlined fs-5">arrow_forward</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 d-none d-lg-block"></div>
+
+        </div>
+    </div>
+</section>
+
+  <section id="proceso" class="split-section position-relative w-100 overflow-hidden" style="margin-top: -1px;">
+
+    <div class="split-bg-layer"></div>
+
+    <div class="container-fluid p-0 h-100">
+      <div class="row g-0 min-vh-100 align-items-stretch">
+
+        <div class="col-lg-6 d-none d-lg-block"></div>
+
+        <div class="col-lg-6 right-glass-col d-flex flex-column justify-content-center p-5 position-relative">
+
+          <div class="content-wrapper w-100" style="max-width: 700px;">
+
+            <h2 class="display-4 fw-black text-white mb-5 animate-up">
+              El Mapa del <span class="text-green-gradient">Destino</span>
+            </h2>
+
+            <div class="row g-3 animate-up delay-1">
+              <div class="col-12">
+                <div class="glass-card-dark p-4 rounded-4 border border-white border-opacity-10">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="material-symbols-outlined fs-2 text-warning">flag</span>
+                    <h4 class="h5 fw-bold text-white mb-0">La misión principal</h4>
+                  </div>
+                  <p class="text-white-70 mb-0 small">
+                    Encontrar la estatua de Bill Cipher antes de que el verano termine.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="glass-card-dark p-4 rounded-4 border border-white border-opacity-10 h-100 text-center d-flex flex-column justify-content-center py-4">
+                  <span class="display-3 fw-bold text-accent-green lh-1 mb-2" style="color: white;">2</span>
+                  <span class="text-uppercase text-white fw-bold small ls-1">Caminos</span>
+                  <small class="text-white-50 d-block mt-1">Lógica vs. Caos</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="glass-card-dark p-4 rounded-4 border border-white border-opacity-10 h-100 text-center d-flex flex-column justify-content-center py-4">
+                  <span class="display-3 fw-bold text-info lh-1 mb-2">4</span>
+                  <span class="text-uppercase text-white fw-bold small ls-1">Finales</span>
+                  <small class="text-white-50 d-block mt-1">¿Victoria o Derrota?</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="personajes" class="characters-bento-section py-5 position-relative overflow-hidden">
+
+    <div class="chars-bg-layer"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50 z-0"></div>
+
+    <div class="container position-relative z-2 py-4">
+
+      <div class="row mb-5 text-center">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="display-3 fw-black mb-0 text-uppercase lh-1">
+            <span class="char-text-texture">PERSONAJES DE</span> <br>
+            <span class="char-text-texture">LA AVENTURA</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-6">
+          <div class="bento-char-card card-large rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/dipper.webp" alt="Dipper" class="char-img">
+            <div class="char-overlay">
+              <h3 class="char-title">Dipper Pines</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="bento-char-card card-large rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/mabel.webp" alt="Mabel" class="char-img">
+            <div class="char-overlay">
+              <h3 class="char-title">Mabel Pines</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bento-char-card card-regular rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/ford.webp" alt="Ford" class="char-img">
+            <div class="char-overlay">
+              <h4 class="char-subtitle">Tío Ford</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bento-char-card card-regular rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/pacifica.webp" alt="Pacifica" class="char-img">
+            <div class="char-overlay">
+              <h4 class="char-subtitle">Pacifica</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bento-char-card card-regular rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/duendes.webp" alt="Duendes" class="char-img">
+            <div class="char-overlay">
+              <h4 class="char-subtitle">Gnomos</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bento-char-card card-regular rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/leñador.webp" alt="Leñador" class="char-img">
+            <div class="char-overlay">
+              <h4 class="char-subtitle">Leñador</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bento-char-card card-regular rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/unicornio.webp" alt="Unicornio" class="char-img">
+            <div class="char-overlay">
+              <h4 class="char-subtitle">Unicornio</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bento-char-card card-regular rounded-5 overflow-hidden position-relative">
+            <img src="src/img/Personajes/oso.webp" alt="Multi-Oso" class="char-img">
+            <div class="char-overlay">
+              <h4 class="char-subtitle">Multi-Oso</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="bento-char-card card-wide rounded-5 overflow-hidden position-relative border border-warning">
+            <img src="src/img/Personajes/estatua.webp" alt="Estatua Bill" class="char-img bright-img">
+
+            <div class="char-overlay overlay-gold d-flex justify-content-between align-items-end">
+              <h3 class="char-title text-warning text-shadow-gold">La Estatua de Bill</h3>
+              <span class="material-symbols-outlined fs-1 text-warning">warning</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="procesos1" class="production-section py-5">
+    <div class="container py-4">
+
+      <div class="row mb-5 text-center">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="display-3 fw-black mb-0 text-uppercase lh-1">
+            <span class="char-text-texture">PROCESO DE</span> <br>
+            <span class="char-text-texture">PRODUCCIÓN</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="card border-0 bg-transparent mt-5">
+
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6">
+            <img src="src/img/proceso1.webp" alt="Diseño Visual en Figma" class="img-fluid rounded-4 shadow w-100">
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="glass-info-card p-4 p-lg-5">
+
+              <h3 class="card-title fw-bold fs-2 mb-3 text-black">1. Diagrama de flujo</h3>
+
+              <div class="d-flex align-items-center gap-2 mb-4">
+                <span class="badge bg-dark text-white border rounded-pill px-3 py-2 d-flex align-items-center gap-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width="12"
+                    style="filter: invert(1);">
+                  Figma
+                </span>
+
+              </div>
+
+              <p class="card-text text-black fs-5 mb-4 lh-lg">
+                Planteamos el Diagrama para validar la arquitectura. Fue fundamental para ordenar la lógica y asegurar
+                que el recorrido cierre perfecto antes de pasar al código.
+              </p>
+
+              <a href="https://www.figma.com/board/5aXrpaCodBCk4iqtwC0tGj/Gravity---Userflow?node-id=0-1&t=tVs57l1cmuNMlHzC-1" target="_blank"
+                class="btn btn-dark btn-lg rounded-pill px-5 py-3 fw-bold d-inline-flex align-items-center gap-2 hover-scale">
+                Ver en Figma
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-external-link">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="card border-0 bg-transparent mt-5">
+
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6">
+            <img src="src/img/frocesotest.webp" alt="Diseño Visual en Figma" class="img-fluid rounded-4 shadow w-100">
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="glass-info-card p-4 p-lg-5">
+
+              <h3 class="card-title fw-bold fs-2 mb-3 text-black">2. Diseño de pantallas</h3>
+
+              <div class="d-flex align-items-center gap-2 mb-4">
+                <span class="badge bg-dark text-white border rounded-pill px-3 py-2 d-flex align-items-center gap-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" width="12"
+                    style="filter: invert(1);">
+                  Figma
+                </span>
+
+              </div>
+
+              <p class="card-text text-black fs-5 mb-4 lh-lg">
+                Ya con el flujo definido, pasamos a la parte estética. Diseñamos las <strong>18 pantallas</strong> del
+                proyecto para establecer la identidad visual, los colores y los componentes.
+              </p>
+
+              <a href="https://www.figma.com/design/TgYHs5WbjQzt47vQU15UDR/Pantallas?t=tVs57l1cmuNMlHzC-1" target="_blank"
+                class="btn btn-dark btn-lg rounded-pill px-5 py-3 fw-bold d-inline-flex align-items-center gap-2 hover-scale">
+                Ver en Figma
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-external-link">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="card border-0 bg-transparent mt-5">
+
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-6">
+            <img src="src/img/proceso3.webp" alt="Diseño Visual en Figma" class="img-fluid rounded-4 shadow w-100">
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="glass-info-card p-4 p-lg-5">
+
+              <h3 class="card-title fw-bold fs-2 mb-3 text-black">3. Implementación</h3>
+
+              <div class="d-flex align-items-center gap-2 mb-4">
+                <span class="badge bg-dark text-white border rounded-pill px-3 py-2 d-flex align-items-center gap-2">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Processing_2021_logo.svg" width="12"
+                    style="filter: invert(1);">
+                  Processing
+                </span>
+                <span class="badge bg-dark text-white border rounded-pill px-3 py-2 d-flex align-items-center gap-2">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/P5.js_icon.svg/1200px-P5.js_icon.svg.png"
+                    width="12" style="filter: invert(1);">
+                  p5.js
+                </span>
+
+              </div>
+
+              <p class="card-text text-black fs-5 mb-4 lh-lg">
+                Ya con el diseño validado, pasamos a tirar código. Implementamos la lógica en p5.js y maquetamos la
+                interfaz, Es 100% interactiva y funcional.
+              </p>
+
+              <a href="juego.html" target="_blank"
+                class="btn btn-dark btn-lg rounded-pill px-5 py-3 fw-bold d-inline-flex align-items-center gap-2 hover-scale">
+                Ver proyecto
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-external-link">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+  </section>
+
+  <section id="equipo" class="credits-bento-section py-5 bg-black overflow-hidden position-relative">
+    <div class="container py-5 position-relative z-2">
+
+      <div class="row mb-5 text-center">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="display-3 fw-black mb-0 text-uppercase lh-1">
+            <span class="textured-text">SOBRE</span> <br>
+            <span class="textured-text">NOSOTROS</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-6">
+          <div class="bento-credit-card franco-card p-5 rounded-5 h-100 d-flex flex-column align-items-start gap-4">
+
+            <div class="profile-avatar shadow-lg border border-2 border-accent-green">
+              <img src="src/img/franco.webp" alt="Franco Orlandi">
+            </div>
+
+            <div class="w-100 position-relative z-2 text-start">
+              <h3 class="display-5 fw-black text-white mb-3">Franco <br> Orlandi</h3>
+
+              <div class="mb-4">
+                <span class="badge-custom bg-green-neon text-black">
+                  Diseñador Web & Dev
+                </span>
+              </div>
+
+              <p class="text-white-70 fs-5 lh-sm mb-0 pe-lg-5">
+                Armé toda la estructura de la información y me encargué de tirar el código para que la lógica del misterio funcione perfecto.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="bento-credit-card kani-card p-5 rounded-5 h-100 d-flex flex-column align-items-start gap-4">
+
+            <div class="profile-avatar shadow-lg border border-2 border-info">
+              <img src="src/img/kani.webp" alt="Kani Andrada">
+            </div>
+
+            <div class="w-100 position-relative z-2 text-start">
+              <h3 class="display-5 fw-black text-white mb-3">Kani <br> Aranda</h3>
+
+              <div class="mb-4">
+                <span class="badge-custom bg-info text-black">
+                  Diseñador
+                </span>
+              </div>
+
+              <p class="text-white-70 fs-5 lh-sm mb-0 pe-lg-5">
+                Me encargue de la dirección de arte, creando las imágenes, los escenarios y dándole forma visual a toda la narrativa.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="cta-final-section position-relative py-5 overflow-hidden">
+
+    <div class="cta-bg-layer"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-75 z-1"></div>
+
+    <div class="container position-relative z-2 py-5">
+
+      <div class="glass-card-dark p-0 rounded-5 overflow-hidden border border-white border-opacity-10 shadow-lg">
+        <div class="row g-0">
+
+          <div
+            class="col-lg-5 p-5 d-flex flex-column justify-content-center bg-accent-green text-black text-center text-lg-start">
+
+            <span
+              class="fw-bold ls-2 text-uppercase mb-2 border border-dark rounded-pill px-3 py-1 w-fit-content mx-auto mx-lg-0">
+              Es hora
+            </span>
+
+            <h2 class="display-2 fw-black lh-08 mb-0 text-uppercase">
+              ¿ESTÁS <br> LISTO?
+            </h2>
+
+          </div>
+
+          <div class="col-lg-7 p-5 d-flex flex-column justify-content-center">
+
+            <h3 class="h2 fw-bold text-white mb-4">
+              El verano termina, pero el <span class="text-accent-green">misterio</span> recién empieza.
+            </h3>
+
+            <p class="text-white-70 fs-5 mb-5 lh-base">
+              Ya tenés las historia y conocés a los personajes. Ahora depende de vos: encontrá la estatua de Bill Cipher
+              o perdete en el bosque para siempre.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 align-items-center justify-content-center justify-content-lg-start">
+
+              <a href="juego.html"
+                class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-black text-uppercase shadow hover-scale">
+                Jugar Aventura
+              </a>
+
+              <div class="rotate-12 d-none d-md-block">
+                <span class="badge bg-warning text-dark border border-dark rounded-pill px-3 py-2 fw-bold shadow-sm">
+                  ¡Suerte!
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="bg-black text-white pt-5 pb-4 border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a class="navbar-brand fw-bold fs-4 text-white d-block mb-3" href="#">
+            Lluvia de <span style="color:var(--accent-purple)">Misterios</span>
+          </a>
+          <p class="text-white-50 mb-4" style="max-width: 300px;">
+            Desarrollado para la materia <strong>Tecnologias web</strong>.
+          </p>
+          
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5 class="fw-bold mb-3 fs-6 text-uppercase letter-spacing-1 text-white">Explorar</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="#inicio" class="footer-link-dark">Inicio</a></li>
+            <li><a href="#procesos1" class="footer-link-dark">Proceso</a></li>
+            <li><a href="#personajes" class="footer-link-dark">Personajes</a></li>
+            <li><a href="#equipo" class="footer-link-dark">Sobre nosotros</a></li>
+            <li><a href="#info" class="footer-link-dark">Sobre nosotros</a></li>
+          </ul>
+        </div>
+
+
+
+      </div>
+
+      <div class="row mt-5 pt-4 border-top border-secondary border-opacity-25">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="small text-white-50 mb-0">
+            &copy; 2025 Franco Orlandi & Kani Andrada.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="small text-white-50 mb-0">
+            Diseñado con <span class="text-danger">❤</span> y mucho café.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
