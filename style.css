@@ -951,39 +951,40 @@ footer.bg-black {
 
 
 /* -------------------------
-   FIX MODAL + IFRAME EN MÓVILES
+   FIX FULLSCREEN MOBILE + DESKTOP
    ------------------------- */
-@media (max-width: 768px) {
-
-    /* Forza al modal a comportarse como pantalla completa real */
-    .modal-dialog.modal-fullscreen {
-        margin: 0;
-        max-width: 100%;
-    }
-
-    .modal-content {
-        height: 100dvh; /* alto real del dispositivo */
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* El body ocupa todo el espacio disponible */
-    .modal-body {
-        flex: 1;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* El iframe se adapta correctamente al viewport */
-    #fullscreen-iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        display: block;
-        object-fit: contain; /* evita deformaciones y recortes */
-    }
+.modal-dialog.modal-fullscreen {
+    margin: 0 !important;
+    max-width: 100% !important;
 }
+
+.modal-content {
+    background: #000;
+    border: none;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* El iframe SIEMPRE debe ocupar todo el espacio disponible */
+#fullscreen-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+
+    /* ATENCIÓN: este es el fix real */
+    object-fit: contain; 
+    background: #000;
+}
+
 
 
