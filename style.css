@@ -992,16 +992,17 @@ footer.bg-black {
     background: #000;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 991ppx) {
   .modal-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-    min-height: 70vh; /* opcional: ayuda a centrar verticalmente */
+    display: flex !important; 
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important; 
+
   }
 }
+
 
 
 
