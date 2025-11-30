@@ -893,7 +893,7 @@ body {
     align-items: center;
 }
 
-/* Contenedor del juego (respeta 640x480 sin deformar) */
+/* Wrapper del juego: tamaño fijo, sin escalado */
 #game-wrapper-id {
     background-color: #000;
     border-radius: 20px;
@@ -902,76 +902,32 @@ body {
     border: 4px solid #000;
     margin: 0 auto;
 
-    /* Mantener 640x480 */
-    width: 640px;
-    height: 480px;
+    /* TAMAÑO EXACTO DEL JUEGO */
+    width: 640px !important;
+    height: 480px !important;
 
-    /* Evitar que el móvil lo achique */
-    max-width: 100%;
-    max-height: none;
+    /* NO PERMITIR ESCALAR */
+    min-width: 640px !important;
+    min-height: 480px !important;
+    max-width: 640px !important;
+    max-height: 480px !important;
 
     position: relative;
 }
 
-/* Asegura que el iframe se mantenga dentro del tamaño */
+/* Iframe EXACTO dentro del wrapper */
 #game-wrapper-id iframe {
-    width: 100%;
-    height: 100%;
+    width: 640px !important;
+    height: 480px !important;
     display: block;
     border: none;
     background: #000;
+
+    /* NO permitir zoom ni resizing */
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 640px !important;
+    min-height: 480px !important;
 }
 
-/* Caja de aviso */
-.alert-box {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.alert-icon {
-    color: #ffc107;
-}
-
-/* Modal */
-.modal-content {
-    background-color: #000;
-}
-
-.modal-body {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
-
-.modal-iframe-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.modal-iframe-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* Botón cerrar */
-.btn-close-white {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1056;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    padding: 1rem;
-    opacity: 1;
-}
 
