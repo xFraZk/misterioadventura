@@ -893,41 +893,5 @@ body {
     align-items: center;
 }
 
-/* Wrapper del juego: tamaño fijo, sin escalado */
-#game-wrapper-id {
-    background-color: #000;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2);
-    border: 4px solid #000;
-    margin: 0 auto;
-
-    /* TAMAÑO EXACTO DEL JUEGO */
-    width: 640px !important;
-    height: 480px !important;
-
-    /* NO PERMITIR ESCALAR */
-    min-width: 640px !important;
-    min-height: 480px !important;
-    max-width: 640px !important;
-    max-height: 480px !important;
-
-    position: relative;
-}
-
-/* Iframe EXACTO dentro del wrapper */
-#game-wrapper-id iframe {
-    width: 640px !important;
-    height: 480px !important;
-    display: block;
-    border: none;
-    background: #000;
-
-    /* NO permitir zoom ni resizing */
-    max-width: none !important;
-    max-height: none !important;
-    min-width: 640px !important;
-    min-height: 480px !important;
-}
 
 
