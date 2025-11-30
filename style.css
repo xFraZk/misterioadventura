@@ -887,14 +887,21 @@ body {
 /* Sección del juego */
 .game-section {
     min-height: 85vh;
-    padding-top: 140px;
-    padding-bottom: 80px;
+    padding-top: 120px;
+    padding-bottom: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .game-section {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+}
 
+/* Contenedor responsivo del juego */
 #game-wrapper-id {
     background-color: #000;
     border-radius: 20px;
@@ -902,18 +909,26 @@ body {
     box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2);
     border: 4px solid #000;
     margin: 0 auto;
-    width: fit-content;
+
+    /* FIX */
+    width: 100%;
+    max-width: 640px;
+    min-height: auto;
     position: relative;
-    min-width: 300px;
-    min-height: 200px;
 }
 
-iframe {
+/* Iframe responsivo */
+#game-wrapper-id iframe,
+.game-iframe {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
     display: block;
     background-color: #000;
+    border: none;
 }
 
-
+/* TEXTO & UI */
 .alert-box {
     background: #f8f9fa;
     border: 1px solid #dee2e6;
@@ -929,6 +944,7 @@ iframe {
     color: #ffc107;
 }
 
+/* MODAL */
 .modal-content {
     background-color: #000;
 }
@@ -941,10 +957,12 @@ iframe {
     background: #000;
 }
 
+/* FIX FULLSCREEN EN MÓVIL */
 .modal-iframe-wrapper {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    background: #000;
 }
 
 .modal-iframe-wrapper iframe {
@@ -953,7 +971,7 @@ iframe {
     border: none;
 }
 
-
+/* Botón cerrar */
 .btn-close-white {
     position: absolute;
     top: 20px;
