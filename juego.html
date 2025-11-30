@@ -3,20 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lluvia de Misterios es una aventura gráfica donde vos decidís el final. Ayudá a Dipper y Mabel a encontrar la estatua de Bill y jugá gratis desde el navegador.">
+
     <title>Gravity Falls | Aventura Gráfica</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+   
   </head>
-  <body style="background-color: #ffff; color: #1a1a1a;">
-
-<nav class="navbar navbar-expand-lg fixed-top landscape-navbar">
+  <body style="background-color: black; color:aliceblue;">
+    
+    <nav class="navbar navbar-expand-lg fixed-top landscape-navbar">
     <div class="container-fluid px-5">
 
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
         <span class="text-white fs-5 fw-bold tracking-wide">Lluvia de <span style="color:var(--accent-purple)">Misterios</span></span>
 
       
@@ -34,11 +38,11 @@
           <li class="nav-item"><a class="nav-link text-white" href="index.html">Misión</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="index.html">Proceso</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="index.html">Personajes</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Sobre nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Misión</a></li>
         </ul>
 
         <div class="d-none d-lg-block">
-          <a href="#inicio" class="btn btn-white-pill shadow-sm">Volver</a>
+          <a href="index.html" class="btn btn-white-pill shadow-sm">Volver</a>
         </div>
 
       </div>
@@ -49,61 +53,46 @@
         <div class="container">
             
             <div class="text-center mb-5">
-                
-                
-                <h1 class="display-4 fw-bold text-dark mb-4">Aventura Gráfica</h1>
-                
-                <div class="alert-box mx-auto">
-                    <span class="material-symbols-outlined alert-icon fs-5">aspect_ratio</span>
-                    <small class="text-secondary fw-bold">¿Se ve cortado? Usá el botón de <strong>Pantalla Completa</strong>.</small>
-                </div>
+                <h1 class="display-4 fw-bold mb-4">Aventura Interactiva</h1>
+                <p class="text-white-50">Jugá aquí mismo o usá el modo pantalla completa.</p>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     
                     <div id="game-wrapper-id">
-                        <iframe src="p5/index.html" width="640" height="480" frameborder="0" allowfullscreen"></iframe>
+                        <iframe src="p5/index.html" width="640" height="480" title="Juego Principal"></iframe>
                     </div>
 
-                    <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
-                        <span class="text-secondary small d-flex align-items-center gap-1">
-                            <span class="material-symbols-outlined fs-6">mouse</span> Clic para activar audio
-                        </span>
-                        <div class="vr bg-dark opacity-25"></div>
-                        
-                        <button type="button" class="btn btn-dark rounded-pill px-4 py-2 d-flex align-items-center gap-2 hover-scale shadow" data-bs-toggle="modal" data-bs-target="#gameModal">
-                            <span class="material-symbols-outlined fs-5">fullscreen</span>
-                            Pantalla Completa
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-outline-light btn-lg rounded-pill px-5" data-bs-toggle="modal" data-bs-target="#gameModal">
+                            Abrir Pantalla Completa
                         </button>
                     </div>
 
                 </div>
             </div>
+
         </div>
     </section>
 
- <div class="modal fade" id="gameModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content bg-black">
-      
-      <div class="modal-header border-0 p-3 position-absolute w-100" style="z-index: 1055;">
-        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      
-      <div class="modal-body d-flex justify-content-center align-items-center p-0 bg-black">
-        <div class="modal-iframe-wrapper">
-             <iframe src="p5/index.html" title="Juego Fullscreen"></iframe>
+    <div class="modal fade" id="gameModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen"> <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Lluvia de Misterios</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <iframe id="fullscreen-iframe" style="width: 100%; height: 100%; border: none;" title="Juego Fullscreen"></iframe>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</div>
 
-   
-
-     <footer class="bg-black text-white pt-5 pb-4 border-top border-secondary">
+    <footer class="bg-black text-white pt-5 pb-4 border-top border-secondary">
     <div class="container">
       <div class="row g-4">
 
@@ -118,7 +107,7 @@
         </div>
 
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h5 class="fw-bold mb-3 fs-6 text-uppercase letter-spacing-1 text-white">Explorar</h5>
+          <h4 class="fw-bold mb-3 fs-6 text-uppercase letter-spacing-1 text-white">Explorar</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
             <li><a href="#inicio" class="footer-link-dark">Inicio</a></li>
             <li><a href="#procesos1" class="footer-link-dark">Proceso</a></li>
@@ -149,14 +138,9 @@
   </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+     
     <script src="modal-sonido.js"></script>
 
+
   </body>
-
 </html>
-
-
-
-
-
