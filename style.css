@@ -886,22 +886,14 @@ body {
 
 /* Sección del juego */
 .game-section {
-    min-height: 85vh;
-    padding-top: 120px;
-    padding-bottom: 70px;
+    padding-top: 140px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    .game-section {
-        padding-top: 90px;
-        padding-bottom: 40px;
-    }
-}
-
-/* Contenedor responsivo del juego */
+/* Contenedor del juego (respeta 640x480 sin deformar) */
 #game-wrapper-id {
     background-color: #000;
     border-radius: 20px;
@@ -910,25 +902,27 @@ body {
     border: 4px solid #000;
     margin: 0 auto;
 
-    /* FIX */
-    width: 100%;
-    max-width: 640px;
-    min-height: auto;
+    /* Mantener 640x480 */
+    width: 640px;
+    height: 480px;
+
+    /* Evitar que el móvil lo achique */
+    max-width: 100%;
+    max-height: none;
+
     position: relative;
 }
 
-/* Iframe responsivo */
-#game-wrapper-id iframe,
-.game-iframe {
+/* Asegura que el iframe se mantenga dentro del tamaño */
+#game-wrapper-id iframe {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    height: auto;
+    height: 100%;
     display: block;
-    background-color: #000;
     border: none;
+    background: #000;
 }
 
-/* TEXTO & UI */
+/* Caja de aviso */
 .alert-box {
     background: #f8f9fa;
     border: 1px solid #dee2e6;
@@ -944,7 +938,7 @@ body {
     color: #ffc107;
 }
 
-/* MODAL */
+/* Modal */
 .modal-content {
     background-color: #000;
 }
@@ -957,12 +951,10 @@ body {
     background: #000;
 }
 
-/* FIX FULLSCREEN EN MÓVIL */
 .modal-iframe-wrapper {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
-    background: #000;
 }
 
 .modal-iframe-wrapper iframe {
@@ -980,6 +972,6 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     padding: 1rem;
-    filter: none;
     opacity: 1;
 }
+
