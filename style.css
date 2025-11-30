@@ -992,6 +992,16 @@ footer.bg-black {
     background: #000;
 }
 
+@media (max-width: 576px) {
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    min-height: 70vh; /* opcional: ayuda a centrar verticalmente */
+  }
+}
 
 
 
