@@ -986,11 +986,6 @@ footer.bg-black {
     background: #000;
 }
 
-@media (max-width: 991ppx) {
- .btn-celular {
-     display: none;
-}
-
 
 
 
