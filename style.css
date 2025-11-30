@@ -728,7 +728,7 @@ body {
     filter: brightness(2) contrast(1.5) drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 
-/* Botón Modern Dark */
+
 .btn-modern-dark {
     background-color: var(--btn-bg);
     border: 1px solid var(--btn-bg);
@@ -985,6 +985,7 @@ footer.bg-black {
     object-fit: contain; 
     background: #000;
 }
+
 
 
 
