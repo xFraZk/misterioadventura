@@ -910,4 +910,44 @@ body {
     border: none;
 }
 
+/* MODAL: fullscreen verdadero */
+.modal-dialog {
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: 100%;
+}
+
+.modal-content {
+    background: #000;
+    border: none;
+    border-radius: 0;
+    height: 100%;
+}
+
+.modal-body {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+/* Wrapper interno del iframe EN MODAL */
+.modal-iframe-wrapper {
+    width: 640px !important;
+    height: 480px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Iframe del juego */
+.modal-iframe-wrapper iframe {
+    width: 640px !important;
+    height: 480px !important;
+    border: none;
+    background: #000;
+}
+
 
