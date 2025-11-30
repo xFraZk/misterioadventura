@@ -910,44 +910,47 @@ body {
     border: none;
 }
 
-/* MODAL: fullscreen verdadero */
+/* --- ESTILOS MODAL FULLSCREEN --- */
+
+/* 1. Que el modal ocupe todo sin márgenes */
 .modal-dialog {
-    max-width: 100% !important;
-    margin: 0 !important;
+    width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: none;
 }
 
 .modal-content {
-    background: #000;
+    height: 100%;
     border: none;
     border-radius: 0;
-    height: 100%;
+    background-color: #000;
 }
 
-.modal-body {
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
-
-/* Wrapper interno del iframe EN MODAL */
+/* 2. El contenedor interno ocupa toda la pantalla */
 .modal-iframe-wrapper {
-    width: 640px !important;
-    height: 480px !important;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Iframe del juego */
+/* 3. EL IFRAME SE ADAPTA (La corrección importante) */
 .modal-iframe-wrapper iframe {
-    width: 640px !important;
-    height: 480px !important;
+    /* Ocupa todo el espacio posible */
+    width: 100%;
+    height: 100%;
+    
+    /* Pero no te deformes, mantene la forma de TV (4:3) */
+    /* Esto hará que aparezcan bandas negras a los costados si sobra espacio */
+    aspect-ratio: 640/480;
+    
+    /* Límites para no salirse de pantalla */
+    max-width: 100vw;
+    max-height: 100vh;
+    
     border: none;
     background: #000;
 }
-
-
