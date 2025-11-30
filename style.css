@@ -885,52 +885,50 @@ body {
 
 /* (AVENTURA)*/
 
- .game-section {
-            min-height: 85vh;
-            padding-top: 140px; 
-            padding-bottom: 80px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.game-section {
+    min-height: 85vh;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
- 
-        #game-wrapper-id {
-            background-color: #000;
-            border-radius: 20px;
-            overflow: hidden;
 
-            box-shadow: 0 0 50px rgba(74, 222, 128, 0.15); 
-            border: 2px solid rgba(255,255,255,0.2);
-            margin: 0 auto;
-            width: fit-content;
-          
-            min-width: 320px; 
-            min-height: 240px;
-        }
+#game-wrapper-id {
+    background-color: #000;
+    border-radius: 20px;
+    overflow: hidden;
 
-  
-        #game-wrapper-id iframe {
-            display: block;
-            background-color: #000;
-            border: none;
-        }
+    box-shadow: 0 0 50px rgba(74, 222, 128, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    width: fit-content;
 
-        
-        .modal-content { 
-          background-color: #000; 
-          color: white; 
-        }
+    min-width: 320px;
+    min-height: 240px;
+}
 
-        .modal-body { 
-          padding: 0; 
-          display: flex; 
-          justify-content: center; 
-          align-items: center;
-         }
 
-        .btn-close-white { 
-          filter: invert(1) 
-          grayscale(100%)
-          brightness(200%);
-         }
+#game-wrapper-id iframe {
+    display: block;
+    background-color: #000;
+    border: none;
+}
+
+
+.modal-content {
+    background-color: #000;
+    color: white;
+}
+
+.modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
