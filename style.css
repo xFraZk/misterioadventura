@@ -704,11 +704,12 @@ body {
 }
 
 @media (max-width: 991px) {
-    .glass-info-card {
-        margin-top: -20px;
-        z-index: 2;
-        position: relative;
+    
+    .production-section {
+        background-image: none !important;
+        background-color: #0b090a; !important; 
     }
+   
 }
 
 .proceso-text-texture {
@@ -947,5 +948,6 @@ footer.bg-black {
 .btn-close-white {
     filter: invert(1) grayscale(100%) brightness(200%);
 }
+
 
 
