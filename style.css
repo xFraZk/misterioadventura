@@ -705,13 +705,12 @@ body {
 }
 
 @media (max-width: 991px) {
-    
     .production-section {
         background-image: none !important;
-        background-color: #0b090a; !important; 
+        background-color: #0b090a !important;
     }
-   
 }
+
 
 .proceso-text-texture {
     background-image: url('src/img/fondo-narrativa.webp');
@@ -934,10 +933,7 @@ footer.bg-black {
 }
 
 
-.modal-content {
-    background-color: #000;
-    color: white;
-}
+
 
 .modal-body {
     padding: 0;
@@ -959,11 +955,13 @@ footer.bg-black {
 
 .modal-content {
     background: #000;
+    color: white;
     border: none;
     height: 100dvh;
     display: flex;
     flex-direction: column;
 }
+
 
 .modal-body {
     flex: 1;
@@ -980,7 +978,6 @@ footer.bg-black {
     object-fit: contain; 
     background: #000;
 }
-
 
 
 
